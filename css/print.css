@@ -1,0 +1,39 @@
+
+#right{
+    display: none;
+}
+#textoBotoes{
+    display: none;
+}
+#textoPrincipal p {
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: "Varela Round", sans-serif;
+    line-height: 22px;
+    color: rgb(0, 0, 0);
+    text-indent: 50px;
+    text-align: justify;
+}
+
+#textoCabecalho {
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: "Varela Round", sans-serif;
+    line-height: 22px;
+    color: rgb(0, 0, 0);
+    text-indent: 50px;
+    text-align: justify;
+    display: flex;
+    justify-content: space-between;
+}
+.titulos {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 26px;
+    font-family: "Varela Round", sans-serif;
+    line-height: 22px;
+    font-weight: 800;
+    color: #000000;
+    margin: 0;
+    margin: 30px 0px;
+  }
