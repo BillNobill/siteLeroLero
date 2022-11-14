@@ -116,6 +116,14 @@ function lerolero() {
 function copiarTexto() {
     navigator.clipboard.writeText(listaCopiar);
 }
+
+//Função para deletar o texto.
+function deletarTexto() {
+    document.getElementById('textoPrincipal').innerHTML = ' ';
+    document.getElementById('textoTitulo').innerHTML = 'Título*';
+    document.getElementById('textoNome').innerHTML = 'Nome*';
+    document.getElementById('textoData').innerHTML = 'Data*';
+}
     
 
 
