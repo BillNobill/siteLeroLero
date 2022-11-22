@@ -1,0 +1,348 @@
+/*--------------------------------------------------Fontes*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+/*--------------------------------------------------Configuração Padrão*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #efb0ff;
+  overflow-x: hidden;
+}
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+/*--------------------------------------------------Scroll bar*/
+body::-webkit-scrollbar {
+  width: 3px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #efb0ff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #efb0ff;
+  border-radius: 1px;
+  border: 10px solid #5effc3;
+}
+#card-left::-webkit-scrollbar {
+  width: 3px;
+}
+
+#card-left::-webkit-scrollbar-track {
+  background: #efb0ff;
+}
+
+#card-left::-webkit-scrollbar-thumb {
+  background-color: #efb0ff;
+  border-radius: 1px;
+  border: 10px solid rgb(94, 255, 195);
+}
+/*--------------------------------------------------Configuração Flexbox*/
+#main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+#left {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  height: auto;
+}
+#card-left {
+  margin-top: 60px;
+  width: 80%;
+  height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #efb0ff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  -webkit-box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+}
+#card-left-son {
+  width: 80%;
+  height: 90%;
+}
+#right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+}
+#card-right {
+  margin-top: 60px;
+  width: 80%;
+  background: #efb0ff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+}
+#card-right-son {
+  width: 80%;
+}
+/*--------------------------------------------------Configuração inputs*/
+.campoInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+.campoInput label {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+  text-indent: 10px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+}
+#card-right #nome,
+#titulo,
+#numeroParagrafos,
+#linkFoto,
+#linkVideo {
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  line-height: 22px;
+  background: #efb0ff;
+  color: white;
+  -webkit-box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+}
+#card-right #nome::placeholder,
+#titulo::placeholder,
+#numeroParagrafos::placeholder,
+#linkFoto::placeholder,
+#linkVideo::placeholder {
+  color: rgb(94, 255, 195);
+}
+#card-right #data {
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  line-height: 22px;
+  background: #efb0ff;
+  -webkit-box-shadow: 0px 35px 47px -20px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 35px 47px -20px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 35px 47px -20px rgba(0, 0, 0, 0.45);
+}
+#card-right #data:valid {
+  color: #ffffff;
+}
+#card-right #data:invalid {
+  color: #5effc3;
+}
+/*--------------------------------------------------Configuração Botões*/
+#textoBotoes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+/*--------------------------------------------------Configuração Botão*/
+.botao {
+  margin: 20px 0px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  background: #5effc3;
+  transition: 0.4s;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #efb0ff;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 42px -8px rgba(94, 255, 195, 0.76);
+  -moz-box-shadow: 0px 10px 42px -8px rgba(94, 255, 195, 0.76);
+  box-shadow: 0px 10px 42px -8px rgba(94, 255, 195, 0.76);
+}
+.botao:hover {
+  background-color: #5effc3;
+  transition: 0.4s;
+  -webkit-box-shadow: 0px 14px 46px -14px rgba(94, 255, 195, 0.9);
+  -moz-box-shadow: 0px 14px 46px -14px rgba(94, 255, 195, 0.9);
+  box-shadow: 0px 14px 46px -14px rgba(94, 255, 195, 0.9);
+}
+.botao:active {
+  background-color: #5effc3;
+  transition: 0.1s;
+  -webkit-box-shadow: 0px 3px 42px -8px rgba(94, 255, 195, 0.7);
+  -moz-box-shadow: 0px 3px 42px -8px rgba(94, 255, 195, 0.7);
+  box-shadow: 0px 3px 42px -8px rgba(94, 255, 195, 0.7);
+  box-shadow: inset 0px 0px 25px -5px rgba(0, 0, 0, 1);
+}
+.textoBotao {
+  margin: 20px 0px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px 20px;
+  margin: 0px 15px;
+  background: #5effc3;
+  transition: 0.4s;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #efb0ff;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 42px -8px rgba(94, 255, 195, 0.76);
+  -moz-box-shadow: 0px 10px 42px -8px rgba(94, 255, 195, 0.76);
+  box-shadow: 0px 10px 42px -8px rgba(94, 255, 195, 0.76);
+}
+.textoBotao:hover {
+  background-color: #5effc3;
+  transition: 0.4s;
+  box-shadow: 0px 16px 25px -11px rgba(94, 255, 195, 1);
+}
+.textoBotao:active {
+  background-color: #5effc3;
+  transition: 0.1s;
+  -webkit-box-shadow: 0px 3px 42px -8px rgba(94, 255, 195, 0.7);
+  -moz-box-shadow: 0px 3px 42px -8px rgba(94, 255, 195, 0.7);
+  box-shadow: 0px 3px 42px -8px rgba(94, 255, 195, 0.7);
+  box-shadow: inset 0px 0px 25px -5px rgba(0, 0, 0, 1);
+}
+/*--------------------------------------------------Configuração de Cabeçalho*/
+#textoCabecalho {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+}
+/*--------------------------------------------------Configuração de texto*/
+.titulos {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 26px;
+  font-family: "Varela Round", sans-serif;
+  line-height: 22px;
+  font-weight: 800;
+  color: #5effc3;
+  margin: 0;
+  margin: 30px 0px;
+}
+#textoPrincipal p {
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+  text-indent: 50px;
+  text-align: justify;
+}
+/*--------------------------------------------------Quando a tela for menor que 680px ou 1100px*/
+@media screen and (max-height: 680px), (max-width: 1100px){
+  body{
+    background: #efb0ff;
+  }
+  #main {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    justify-content: center;
+  }
+  #left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding-bottom: 50px;
+  }
+  #right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+  #textoPrincipal p {
+    font-size: 12px;
+  }
+  .titulos{
+    font-size: 22px!important;
+  }
+  .botao{
+    font-size: 12px;
+  }
+  .campoInput label{
+    font-size: 12px;
+  }
+  #textoCabecalho{
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+  #nome,
+  #titulo,
+  #numeroParagrafos,
+  #linkFoto,
+  #linkVideo,
+  #data {
+    font-size: 12px!important;
+  }
+}
+
+#color {
+  justify-content: center;
+  margin-top: 40px;
+  width: 80%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #efb0ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  -webkit-box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 35px 79px -21px rgba(0, 0, 0, 0.75);
+}
+
+button img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 5px solid black;
+  cursor: pointer;
+}
+
+.cores{
+  border: none;
+  background: transparent;
+}

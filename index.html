@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argue Text</title>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" id="css" href="css/index.css" media="screen">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="shortcut icon" href="img/file-lines-solid.svg" type="svg/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <main>
+        <article>
+            <div id="formulario">
+                <div id="main">
+                    <div id="right">
+                        <div id="card-right">
+                            <div id="card-right-son">
+                              <form>
+                                <h1 class="titulos">Lero Lero</h1>
+                                <div class="campoInput">
+                                    <label>Nome:</label>
+                                    <input type="text " id="nome" placeholder="seu nome" autocomplete="off">
+                                </div>
+                                <div class="campoInput">
+                                    <label>Data:</label>
+                                    <input type="date" id="data" autocomplete="off" required="true">
+                                </div>
+                                <div class="campoInput">
+                                    <label>Título:</label>
+                                    <input type="text" id="titulo" placeholder="título" autocomplete="off">
+                                </div>
+                                <div class="campoInput">
+                                    <label>Quantidade de parágrafos desejada:</label>
+                                    <input type="text" id="numeroParagrafos" placeholder="número" autocomplete="off">
+                                </div>
+                                <!-- <p>
+                                    <label>Foto:</label>
+                                    <input type="url" placeholder="link" id="linkFoto" autocomplete="off">
+                                </p>
+                                <p>
+                                    <label>Vídeo:</label>
+                                    <input type="url" placeholder="link" id="linkVideo" autocomplete="off">
+                                </p> -->
+                                <div class="campoInput">
+                                    <button type="button" onclick="lerolero()" class="botao">Executar</button>
+                                </div>
+                              </form>
+                            </div>
+                        </div>
+                        <div id="color">                          
+                          <button class="cores" onclick="roxerde()" type="button">
+                            <img src="img/roxerde.png">
+                          </button>
+                          <button class="cores" onclick="azurelo()" type="button">
+                            <img src="img/azurelo.png">
+                          </button>
+                          <button class="cores">
+                            <img src="img/branzul.png" onclick="branzul()" type="button">
+                          </button>
+                          <button class="cores">
+                            <img src="img/pretelho.png" onclick="pretelho()" type="button">
+                          </button>
+                          <button class="cores">
+                            <img src="img/verdosa.png" onclick="verdosa()" type="button">
+                          </button>
+                        </div>
+                    </div>
+                    <div id="left">
+                        <div id="card-left">
+                            <div id="card-left-son">
+                                <h1 id="textoTitulo" class="titulos">
+                                    Título*
+                                </h1>
+                                <div id="textoCabecalho">
+                                    <p id="textoNome">
+                                        Nome*
+                                    </p>
+                                    <p id="textoData">
+                                        Data*
+                                    </p>
+                                </div>
+                                <section id="textoPrincipal">
+
+                                </section>
+                                <div id="textoBotoes">
+                                    <button type="button" onclick="copiarTexto()" id="botaoCopiar" class="textoBotao"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20">
+                                            <path
+                                                d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z" />
+                                        </svg></button>
+                                        <button type="button" onclick="window.print()" id="botaoImprimir" class="textoBotao"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20">
+                                            <path
+                                                d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                                        </svg></button>
+                                    <button type="button" onclick="deletarTexto()" id="botaoDeletar" class="textoBotao"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20">
+                                            <path
+                                                d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
+                                        </svg></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+</body>
+
+</html>
